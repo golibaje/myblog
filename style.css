@@ -1,0 +1,95 @@
+/*body formating*/
+body{
+    background-color: #ebebe5;
+    margin: 110px
+    
+    
+}
+.pagetitle a{
+    float:left;
+    font-size:50px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+}
+/*format of a paragraph*/
+.formatp{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size: larger;
+    line-height: 47px;
+}
+
+/*Page heading format*/
+.pghead{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*website name format*/
+.webname a:hover {
+    color: gray;
+}
+
+/*navigation bar setup*/
+.navigation a{
+    text-decoration: none;
+    color: rgb(224, 71, 124);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+.navigation a:hover{
+    color: gray;
+}
+
+.navigation ul li{
+    width: 150px;
+    list-style-type: none;
+    text-align: center;
+    float:right;
+}
+
+
+/*link styling*/
+.linkstyle {
+    text-decoration: none;
+    color: rgb(224, 71, 124);
+}
+a:hover{
+    color: gray;
+}
+
+/*h3 headingstyle*/
+.h3style{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    line-height: 50px;
+
+}
+
+/*resource list*/
+.resourcelist{
+    line-height: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size: larger;
+}
+
+/*contact form setup and styling*/
+.contact-form {
+    font-size: larger;
+    color: blue;
+    font-family: Consolas,monaco,monospace; 
+}
+
+/*normal link styling*/
+.nlink{
+    color:rgb(158, 38, 177);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size: 22px;
+    line-height: 47px;
+}
+
+
+
