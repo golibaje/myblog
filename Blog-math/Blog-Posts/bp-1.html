@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskannada.css);
+    body { font-family: "Noto Sans Kannada", sans-serif; font-size: 19.0px; line-height: 1.11em; }
+</style>
+<!--<html lang="en">-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pages/style.css">
+    <link rel="Shortcut Icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcfrGfnlUO8np43Ke12yex-msdQthAETNldg&usqp=CAU">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+    <title>Graphs</title>
+</head>
+<body>
+    <div class="header">
+        <div class="pagetitle"><a href="/pages/index.html">ಗೋಳಿ ಬಜೆ</a></li></div>
+        <div class="navigation" id="navbar">
+        <ul>
+            <!--<li><a href="index.html">Home</a></li>-->
+            <li><a href="/pages/myworks.html">My Works</a></li>
+            <li><a href="/pages/contact.html">Contact Me</a></li>
+            <li><a href="/pages/blog.html">Blog</a></li>
+            <li><a href="/pages/about.html">About Me</a></li>
+            <li><a href="/pages/index.html">Home</a></li>
+        </ul>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <hr>
+  
+    <h2 class="pghead">Attacking Combi Problems Using Graphs Episode-I</h2>
+    <h2 class="pghead">Genre: <a class="genre" href="/Math-Topics/graph-theory.html">Graph Theory</a></h2>
+    <p class="formatp">
+        <b>Problem 1.[INMO 2023]</b> Let \(S\) be a finite set of positive integers. Assume that there are precisely \(2023\) ordered pairs \((x, y)\) in \(S\times S\) so that the product \(xy\) is a perfect square. Prove that one can find at least four distinct elements in \(S\) so that none of their pairwise products is a perfect square.<br/>
+        <i>Note</i>: As an example, if \(S = \{1, 2, 4\}\), there are exactly five such ordered pairs: \((1, 1), (1, 4), (2, 2), (4, 1)\), and \((4, 4)\).
+        <br/>
+        <b>Solution.</b> Some of the ideas that might pop-up at first are graph-theory,Ramsey-theory and the box-priciple. I got excited to bombard the problem with graphs. Maybe we can convert this seemingly complex problem into a calssical example of Ramsey theory, which is indeed the acquaintance and stranger problem.
+        Let me just introduce a <i>complete-graph</i> \(\mathfrak{G}(V,E)\) where \(|V|=2|S|\).
+        <br/>
+        Consider <i>edge colouring</i> where <i>red</i> represents that the adjacent vertices multiply together to give a perfect square. And <i>blue</i> for the exact opposite. Got my hands dirty in search for peculiar behaviours of the colouring.
+        <img id="img-1"src="/images/img-1.jpg" alt="graph-image-1" >
+        <figcaption>Fig:1 \(k_5\)</figcaption> 
+    </p>
+    <p class="formatp">
+        You could preferably knock out the blue lines as they aren't really necessary. We need to come up with some heuristics or rules to continue on the trail. Try out some graph colourings for different number of vertices. You may notice one thing that you can never find a clique with \(3\) vertices such that \(2\) of the edges are red and the other is blue. Think why!(This reasoning is the biggest hint to the problem).Now as we have got the basic reasoning we need to build up. Also note the number of ordered pairs that a clique with \(\delta\) vertices contributes.<br/>
+        Let's say that if there was just one whole <em>clique</em>, then there would be \(Q_i^2\) number of perfect squares. But we can't do that to a graph with \(2\times 2023\) vertices also same thing follows for \(2\) <em>discrete red cliques</em> and the same for \(3\) discrete cliques as well. Which contradicts that there has to be atleast \(4\) distinct cliques which is actually possible. And yeah we are done! I have come across through many interesting thought processes to this problem, mainly using systematic counting and equivalence relations and stuff. I suppose there was some solution which was done using vector spaces on AoPS, but I assume it as a bit overkill and at the end of the day it was equivalence relations, no offence btw.∎
+    </p>
+    <br/>
+    <br/>
+    <p class="formatp">
+        <b>Problem 2.[IRMO 1989]</b> Each of the \(n\) members of a <i>club</i> is given a different item of information. They are allowed to share the information, but, for security reasons, only in the following way: A pair may communicate by telephone. During a telephone call only one member may speak. The member who speaks may tell the other member all the information s(he) knows. Determine the minimal number of phone calls that are required to convey all the information to each other.<br/>
+        <b>Solution.</b> Once again a graph related question. If you are like who has read Engel's book then probably you will have the strategy and that is <i>extremal principle</i>. Let me name the member who has the highest number of information as <i>neighbour auntie</i>. 
+        <br/>
+        <i>Note</i>: There need not be \(1\) neighbour auntie necessarily.
+    </p>
+    <div class="claimbox">
+       <b>Conjecture.</b><br/>
+       The \(min(deg_{\mathfrak{G}}(v_i))=2\). Here \(\mathfrak{G}(V,E)\) is a <em>tournament</em> represnting relation between the club members. 
+       <center>\(v_i\in V\) and \(\forall i\in\{1,2,\cdots,n\}\)</center>
+       The <em>directed-edges</em> represent a phone call in the corresponding direction whereas the vertices are the club members.<br/>
+    </div>
+    <p class="formatp">
+        This conjecture seems quite trivial by now. If you think about the contrary where 
+        \(deg_{\mathfrak{G}}(v_i)=1\), then either \(v_i\) will not be able to tell the piece of information s(he) has to \(v_j\) or get information from \(v_j\) where \(j\in\{1,2,\cdots,n\}\) and \(i\ne j\). So consider the below tournament.
+        <img id="img-2"src="/images/img-2.jpg" alt="img-2">
+        <figcaption>Fig:2 Neighbour auntie has the gossips</figcaption>
+        </p>
+
+    <p class="formatp">
+        Here \(v_n\) is said to be the neighbour auntie. So think of it as, \(v_n\) collects all the information from the fellow club members first which means that s(he) has \(n\) number of information. Then s(he) will tell information to all one by one. So the least number of phone calls required to do so is \(2\cdot(n-1)\). So, this was a pretty simple one. Could this be solved by combinatorics? and yes it's possible. Do try it out.∎<br/><br/>
+        <b>Signing Out:</b><br/>
+        Do let me know about the mistakes or fake proof if any. Cause often I tend to do fake proofs unknowingly. As this is my first blog, I may not be a good writer. So, tell me your perspective about the corrections and changes that I have to go through my writing style. I will inculcate your reviews if I find it satisfactory. Do mail me about alternate solutions or ideologies which are really mind boggling if any.Bye!
+    </p>
+    <hr>
+    &copy;ಗೋಳಿಬಜೆ 2023
+    <div class="contact-form">
+        Email:-goolibajje@gmail.com
+    </div>
+    
+</body>
+</html>
