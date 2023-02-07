@@ -1,7 +1,11 @@
 /*body formating*/
 body{
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 110px;
+    margin-top: 110px;
     background-color: #ffffff;
-    margin: 110px
+    font-family: Georgia, 'Times New Roman', Times, serif;
     
     
 }
@@ -33,7 +37,7 @@ body{
 /*navigation bar setup*/
 .navigation a{
     text-decoration: none;
-    color: rgb(224, 71, 124);
+    color: rgb(196, 34, 91);
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: larger;
 }
@@ -53,10 +57,18 @@ body{
 /*link styling*/
 .linkstyle {
     text-decoration: none;
-    color: rgb(224, 71, 124);
+    color: rgb(196, 34, 91);
 }
 a:hover{
     color: gray;
+}
+
+.linkstyle-topics {
+    color: rgb(196, 34, 91);
+    line-height: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size: 28;
 }
 
 /*h3 headingstyle*/
@@ -84,11 +96,79 @@ a:hover{
 
 /*normal link styling*/
 .nlink{
-    color:rgb(158, 38, 177);
+    color:rgb(160, 38, 179);
     font-family: Georgia, 'Times New Roman', Times, serif;
     letter-spacing: 2px;
     font-size: 22px;
     line-height: 47px;
+}
+
+/*styling for genre type*/
+.genre{
+    color:rgb(196, 34, 91);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size: 26px;
+    line-height: 47px;
+}
+.genre a:hover{
+    color: gray;
+}
+
+
+#img-1{
+   
+    display:block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35%;
+    width: 35%;
+}
+#img-2{
+    display:block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 45%;
+    width: 45%;
+}
+
+#img-3 {
+    display:block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35%;
+    width: 35%;
+}
+
+#source{
+    position: absolute;
+    text-align: right;
+}
+
+/*if you need to write down something below a picture*/
+figcaption {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size: larger;
+    line-height: 47px;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+}
+
+/*if you need to conjecture then use it anudeep*/
+.claimbox {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size: larger;
+    line-height: 47px;
+    padding: 10px;
+    border-left: 5px solid rgb(196, 34, 91);
+    background-color: rgb(248, 237, 241);
+    margin: 0;
 }
 
 
