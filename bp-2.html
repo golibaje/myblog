@@ -18,15 +18,15 @@
 </head>
 <body>
     <div class="header">
-        <div class="pagetitle"><a href="/pages/index.html">ಗೋಳಿ ಬಜೆ</a></li></div>
+        <div class="pagetitle"><a href="index.html">ಗೋಳಿ ಬಜೆ</a></li></div>
         <div class="navigation" id="navbar">
         <ul>
             <!--<li><a href="index.html">Home</a></li>-->
-            <li><a href="/pages/myworks.html">My Works</a></li>
-            <li><a href="/pages/contact.html">Contact Me</a></li>
-            <li><a href="/pages/blog.html">Blog</a></li>
-            <li><a href="/pages/about.html">About Me</a></li>
-            <li><a href="/pages/index.html">Home</a></li>
+            <li><a href="myworks.html">My Works</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="index.html">Home</a></li>
         </ul>
         </div>
     </div>
@@ -35,7 +35,7 @@
     <hr>
   
     <h2 class="pghead">An IMO Problem with Debatable Rating</h2>
-    <h2 class="pghead">Genre: <a class="genre" href="/Math-Topics/graph-theory.html">Graph Theory</a></h2>
+    <h2 class="pghead">Genre: <a class="genre" href="graph-theory.html">Graph Theory</a></h2>
     <p class="formatp">
         <b>Before You Dive In:</b><br/>
         I came across this problem about a week ago or something through <a class="nlink" href="https://dgrozev.wordpress.com/2019/12/05/splitting-the-cliques-of-a-graph-imo-2007-p3/" target="_blank">Grozev's Post</a> where he was speaking about the <i>MOHS hardness scale</i> proposed by Evan Chen. I had taken a screenshot of the problem and today I pondered on it. It's quite obvious that you would likely be tempted to grab some graphs. <br/>
@@ -52,7 +52,7 @@
         </div>
         <p class="formatp">
             At first, all the contestants were having a talk on the fact that "when will Samay post a Stand-Up" in the foyer. After that, they are divided by a wall. Let me just say that the <i>clique</i> with the max size is \(\mathfrak{Q}_{max}\). Aslo just for my convenience let \(|\mathfrak{Q}_{max}|=s_{max}\). And it's mentioned that the largest size of a clique is even. Consider the below graph:
-            <img id="img-4" src="/images/img-4.jpg" alt="img-4">
+            <img id="img-4" src="img-4.jpg" alt="img-4">
             <figcaption>Fig:1 An example of \(\mathfrak{G}\)</figcaption>
         
         <br/>
@@ -61,7 +61,7 @@
             Also let me say that \(R_1,R_2\in \mathfrak{G}\) where \(V_{R_1}\cap V_{R_2}=\phi\). Yes, \(R_1\) corresponds to room one and \(R_2\) for room two. I shall consider the foyer itself as \(R_1\). So in the first step a clique of \(K_6\) with size \(\frac{6}{2}=3\) is put into \(R_2\) and let that clique be \(Q_2\) also the other half which is still in \(R_1\) be \(Q_1\). If \(\exists\) \(Q_i\in R_1 \ni |V_{Q_i}|>3\), and \(|V_{Q_i}|-|V_{Q_1}|=m\). We then take a clique of order \(m\) out of \(Q_1\) and then place it in \(R_2 \iff |V_{Q_{max}}|>|V_{Q_i}|\). If there arises a situation where, <b>WLOG</b> \(|V_{Q_i}|>|V_{Q_1}|\), then we can split \(Q_i\) among the rooms.
             
             We are pretty much done except for replacing this particular case that I considered with a general case. Also notice that even number-sized cliques don't contribute anything in particular. Let me give you one example:
-            <img id="img-5" src="/images/img-5.jpg" alt="img-5">
+            <img id="img-5" src="img-5.jpg" alt="img-5">
             <figcaption>Fig:2 Even number sized cliques are not special</figcaption>
             </p>
         <p class="formatp">
