@@ -21,7 +21,7 @@ body{
     font-family: Georgia, 'Times New Roman', Times, serif;
     letter-spacing: 2px;
     font-size: larger;
-    line-height: 47px;
+    line-height: 44px;
 }
 
 /*Page heading format*/
@@ -58,6 +58,7 @@ body{
 .linkstyle {
     text-decoration: none;
     color: rgb(196, 34, 91);
+
 }
 a:hover{
     color: gray;
@@ -143,6 +144,24 @@ a:hover{
     width: 35%;
 }
 
+#img-4 {
+    display:block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40%;
+    width: 40%;
+}
+
+#img-5 {
+    display:block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 45%;
+    width: 45%;
+}
+
 #source{
     position: absolute;
     text-align: right;
@@ -168,6 +187,18 @@ figcaption {
     padding: 10px;
     border-left: 5px solid rgb(196, 34, 91);
     background-color: rgb(248, 237, 241);
+    margin: 0;
+}
+
+
+.note {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-size: larger;
+    line-height: 47px;
+    padding: 10px;
+    border-left: 5px solid rgb(196, 34, 91);
+    background-color: rgb(255, 255, 255);
     margin: 0;
 }
 
