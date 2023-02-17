@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<style>
+    @import url(http://fonts.googleapis.com/earlyaccess/notosanskannada.css);
+    body { font-family: "Noto Sans Kannada", sans-serif; font-size: 19.0px; line-height: 1.11em; }
+</style>
+<!--<html lang="en">-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/pages/style.css">
+    <link rel="Shortcut Icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcfrGfnlUO8np43Ke12yex-msdQthAETNldg&usqp=CAU">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+    <title>Graphs</title>
+</head>
+<body>
+    <div class="header">
+        <div class="pagetitle"><a href="/pages/index.html">ಗೋಳಿ ಬಜೆ</a></li></div>
+        <div class="navigation" id="navbar">
+        <ul>
+            <!--<li><a href="index.html">Home</a></li>-->
+            <li><a href="/pages/myworks.html">My Works</a></li>
+            <li><a href="/pages/contact.html">Contact Me</a></li>
+            <li><a href="/pages/blog.html">Blog</a></li>
+            <li><a href="/pages/about.html">About Me</a></li>
+            <li><a href="/pages/index.html">Home</a></li>
+        </ul>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <hr>
+  
+    <h2 class="pghead">An IMO Problem with Debatable Rating</h2>
+    <h2 class="pghead">Genre: <a class="genre" href="/Math-Topics/graph-theory.html">Graph Theory</a></h2>
+    <p class="formatp">
+        <b>Before You Dive In:</b><br/>
+        I came across this problem about a week ago or something through <a class="nlink" href="https://dgrozev.wordpress.com/2019/12/05/splitting-the-cliques-of-a-graph-imo-2007-p3/" target="_blank">Grozev's Post</a> where he was speaking about the <i>MOHS hardness scale</i> proposed by Evan Chen. I had taken a screenshot of the problem and today I pondered on it. It's quite obvious that you would likely be tempted to grab some graphs. <br/>
+        Evan Chen had given this problem a whopping \(50M\) and I believe it's the highest rating! But Grozev was trying to be generous to give it \(35M\). He also mentioned the fact that rating is mostly subjective and debatable which I completely agree with. Ohh so coming back to my thing, this problem seemed very interesting as I love using graphs. It was also not too late to be cognizant of the fact that this problem really is not that of a beefy guy. You will feel it very intuitive and trivial when you take a look at the problem several times. I suppose, Chen was trolling me(us) or something. Or maybe the fact that "rating is a subjective matter"...<br/><br/>
+        
+
+
+        <b>Problem 3.[IMO 2007]</b> In a mathematical competition some competitors are friends. Friendship is always mutual. Call a group of competitors a clique if each two of them are friends. (In particular, any group of fewer than two competitors is a clique.) The number of members of a clique is called its size. Given that, in this competition, the largest size of a clique is even, prove that the competitors can be arranged in two rooms such that the largest size of a clique contained in one room is the same as the largest size of a clique contained in the other room.
+        <br/><br/>
+        <b>Solution.</b> So as I mentioned the main weapon is graphs. Let me say that \(\mathfrak{G}(V,E)\) be a graph \(\ni |V|=n\) and \(e\in E\) represents friendship. Here \(n\) is the number of competitors.
+        </p>
+        <div class="note">
+        <i>Note:</i> If any \(2\) vertices \(v_i,v_j\in V\) are not adjacent where \(i\ne j\), then there's no friendship between \(v_i\) and \(v_j\).
+        </div>
+        <p class="formatp">
+            At first, all the contestants were having a talk on the fact that "when will Samay post a Stand-Up" in the foyer. After that, they are divided by a wall. Let me just say that the <i>clique</i> with the max size is \(\mathfrak{Q}_{max}\). Aslo just for my convenience let \(|\mathfrak{Q}_{max}|=s_{max}\). And it's mentioned that the largest size of a clique is even. Consider the below graph:
+            <img id="img-4" src="/images/img-4.jpg" alt="img-4">
+            <figcaption>Fig:1 An example of \(\mathfrak{G}\)</figcaption>
+        
+        <br/>
+        </p>
+        <p class="formatp">
+            Also let me say that \(R_1,R_2\in \mathfrak{G}\) where \(V_{R_1}\cap V_{R_2}=\phi\). Yes, \(R_1\) corresponds to room one and \(R_2\) for room two. I shall consider the foyer itself as \(R_1\). So in the first step a clique of \(K_6\) with size \(\frac{6}{2}=3\) is put into \(R_2\) and let that clique be \(Q_2\) also the other half which is still in \(R_1\) be \(Q_1\). If \(\exists\) \(Q_i\in R_1 \ni |V_{Q_i}|>3\), and \(|V_{Q_i}|-|V_{Q_1}|=m\). We then take a clique of order \(m\) out of \(Q_1\) and then place it in \(R_2 \iff |V_{Q_{max}}|>|V_{Q_i}|\). If there arises a situation where, <b>WLOG</b> \(|V_{Q_i}|>|V_{Q_1}|\), then we can split \(Q_i\) among the rooms.
+            
+            We are pretty much done except for replacing this particular case that I considered with a general case. Also notice that even number-sized cliques don't contribute anything in particular. Let me give you one example:
+            <img id="img-5" src="/images/img-5.jpg" alt="img-5">
+            <figcaption>Fig:2 Even number sized cliques are not special</figcaption>
+            </p>
+        <p class="formatp">
+            Check and try out some more examples similar to this. If the largest-sized clique in \(\mathfrak{G}\) is not unique then all these shit need not be considered ∎
+            <br/><br/>
+        
+            <b>My Views:</b><br/>
+            I still didn't get the fact why the problem is focusing on \(s_{max}\equiv 0(\)mod \(2)\)! Please do let me know why it's so. Grozev, if you ever happen to come across this post then it's my greatest pleasure, Sir. There has been a whole lot of discussions about this problem on AoPS, you can check that out to. I had seen a post on Math-Stackexchange, where a  guy was suggesting to prove this using group-theory. I do not know group theory, but would definitely love to see the idea behind it. Please do let me know about the errors in my proof or typos it any.
+            <br/><br/>
+
+            <b>References:</b><br/>
+            <ul class="resourcelist">
+                <li><a class="linkstyle" href="https://dgrozev.wordpress.com/2019/12/05/splitting-the-cliques-of-a-graph-imo-2007-p3/" target="_blank">Dragomir Grozev's Post</a></li>
+                <li><a class="linkstyle" href="https://web.evanchen.cc/upload/MOHS-hardness.pdf" target="_blank">MOHS-hardness</a></li>
+                <li><a class="linkstyle" href="https://math.stackexchange.com/questions/1815188/using-group-theory-to-solve-this-imo-problem" target="_blank">Idea of Using Group-Theory</a></li>
+                <li><a class="linkstyle" href="https://artofproblemsolving.com/community/c6h159838p893746" target="_blank">AoPS Discussion</a></li>
+        
+            </ul>
+    </p>
+
+   
+    <hr>
+    &copy;ಗೋಳಿಬಜೆ 2023
+    <div class="contact-form">
+        Email:-goolibajje@gmail.com
+    </div>
+    
+</body>
+</html>
